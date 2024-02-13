@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://dq06evnvscnt7"]
 
-[ext_resource type="Texture2D" uid="uid://fe76mpodn3f4" path="res://Assets/Astroids/meteorBrown_big1.png" id="1_s8uq8"]
+[ext_resource type="Texture2D" uid="uid://fe76mpodn3f4" path="res://assets/astroids/meteorBrown_big1.png" id="1_s8uq8"]
 
 [node name="Astroid" type="StaticBody2D"]
 

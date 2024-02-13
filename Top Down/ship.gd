@@ -54,3 +54,7 @@ func _physics_process(delta: float) -> void:
 	print(velocity)
 	
 	move_and_slide()
+
+
+func _on_button_pressed() -> void:
+	get_tree().quit()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgh7w314elldg"]
+[gd_scene load_steps=4 format=3 uid="uid://dgh7w314elldg"]
 
-[ext_resource type="Texture2D" uid="uid://dkdi32vlrlfla" path="res://Assets/Player/playerShip1_blue.png" id="1_qpk2e"]
+[ext_resource type="Texture2D" uid="uid://dkdi32vlrlfla" path="res://assets/player/playerShip1_blue.png" id="1_qpk2e"]
 [ext_resource type="Script" path="res://ship.gd" id="1_sdl1h"]
+[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://space_theme.tres" id="2_47r5m"]
 
 [node name="PlayerShip" type="CharacterBody2D" groups=["player", "ships"]]
 motion_mode = 1
@@ -15,6 +16,22 @@ texture = ExtResource("1_qpk2e")
 polygon = PackedVector2Array(38, 9, 38, -8, 13, -13, 0, -35, 6, -44, 7, -50, -25, -47, -28, -14, -38, -7, -38, 7, -28, 14, -25, 47, 5, 50, 7, 45, 1, 35, 13, 13)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-5, -10)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_speed = 200.0
 rotation_smoothing_speed = 100.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_left = 10.0
+offset_top = 18.0
+offset_right = 174.0
+offset_bottom = 58.0
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme = ExtResource("2_47r5m")
+text = "Quit Game"
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/Button" to="." method="_on_button_pressed"]

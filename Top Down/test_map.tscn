@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://glksjggrnw8g"]
+[gd_scene load_steps=6 format=3 uid="uid://glksjggrnw8g"]
 
 [ext_resource type="PackedScene" uid="uid://dq06evnvscnt7" path="res://Astroid.tscn" id="1_htvwf"]
+[ext_resource type="Script" path="res://test_map.gd" id="1_xtgcj"]
 [ext_resource type="PackedScene" uid="uid://dgh7w314elldg" path="res://PlayerShip.tscn" id="1_xwfq3"]
 [ext_resource type="PackedScene" uid="uid://5aadiie064j" path="res://AstroidPull.tscn" id="3_6rtxo"]
 [ext_resource type="PackedScene" uid="uid://ci2hneoqm0ub6" path="res://AstroidPush.tscn" id="4_25c8i"]
 
 [node name="TestMap" type="Node2D"]
+script = ExtResource("1_xtgcj")
 
 [node name="PlayerShip" parent="." instance=ExtResource("1_xwfq3")]
 position = Vector2(618, 314)

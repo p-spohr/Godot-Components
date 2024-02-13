@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6keqayievla7"
-path="res://.godot/imported/meteorGrey_small1.png-539d5640de9b5c7566b3bf4212e1be14.ctex"
+path="res://.godot/imported/meteorGrey_small1.png-fb59fa542e7c3b56844d89b4224ee561.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Astroids/meteorGrey_small1.png"
-dest_files=["res://.godot/imported/meteorGrey_small1.png-539d5640de9b5c7566b3bf4212e1be14.ctex"]
+source_file="res://assets/astroids/meteorGrey_small1.png"
+dest_files=["res://.godot/imported/meteorGrey_small1.png-fb59fa542e7c3b56844d89b4224ee561.ctex"]
 
 [params]
 
