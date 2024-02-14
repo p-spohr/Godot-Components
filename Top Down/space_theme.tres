@@ -4,5 +4,10 @@
 
 [resource]
 default_font = ExtResource("1_1omcj")
+SelectLevelMargin/base_type = &"MarginContainer"
+SelectLevelMargin/constants/margin_bottom = 20
+SelectLevelMargin/constants/margin_left = 20
+SelectLevelMargin/constants/margin_right = 20
+SelectLevelMargin/constants/margin_top = 10
 start_menu_buttons/base_type = &"Button"
 start_menu_buttons/font_sizes/font_size = 26

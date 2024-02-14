@@ -105,3 +105,8 @@ func start_primary_scene(scene_path : String) -> void:
 func _on_start_timer_timeout() -> void:
 	
 	start_primary_scene(test_arena_path)
+
+
+func _on_select_level_pressed() -> void:
+	
+	get_tree().change_scene_to_file("res://SelectLevel.tscn")
