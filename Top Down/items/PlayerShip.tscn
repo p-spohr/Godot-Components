@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dgh7w314elldg"]
 
 [ext_resource type="Texture2D" uid="uid://dkdi32vlrlfla" path="res://assets/player/playerShip1_blue.png" id="1_qpk2e"]
-[ext_resource type="Script" path="res://ship.gd" id="1_sdl1h"]
-[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://space_theme.tres" id="2_47r5m"]
+[ext_resource type="Script" path="res://items/player_ship.gd" id="1_sdl1h"]
+[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://themes/space_theme.tres" id="2_47r5m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rrd1u"]
 
@@ -18,7 +18,6 @@ texture = ExtResource("1_qpk2e")
 polygon = PackedVector2Array(38, 9, 38, -8, 13, -13, 0, -35, 6, -44, 7, -50, -25, -47, -28, -14, -38, -7, -38, 7, -28, 14, -25, 47, 5, 50, 7, 45, 1, 35, 13, 13)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-5, -10)
 zoom = Vector2(0.5, 0.5)
 position_smoothing_speed = 200.0
 rotation_smoothing_speed = 100.0
@@ -29,8 +28,10 @@ rotation_smoothing_speed = 100.0
 modulate = Color(0.47451, 1, 0.760784, 1)
 texture_filter = 1
 material = SubResource("CanvasItemMaterial_rrd1u")
-offset_right = 228.0
-offset_bottom = 74.0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 254.0
+offset_bottom = 104.0
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
 layout_mode = 2
@@ -52,5 +53,37 @@ layout_mode = 2
 theme = ExtResource("2_47r5m")
 text = "Change Level"
 
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_top = 9.0
+offset_right = -16.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="MovementOption" type="OptionButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Choose if the ship steering should be controled by the mouse or by WASD."
+item_count = 2
+selected = 0
+popup/item_0/text = "Velocity Movement"
+popup/item_0/id = 0
+popup/item_1/text = "Position Movement"
+popup/item_1/id = 1
+
+[node name="SteeringOption" type="OptionButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Choose if the ship steering should be controled by the mouse or by WASD."
+item_count = 2
+selected = 0
+popup/item_0/text = "WASD Steering"
+popup/item_0/id = 0
+popup/item_1/text = "Mouse Steering"
+popup/item_1/id = 1
+
 [connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/ChangeLevel" to="." method="_on_change_level_pressed"]
+[connection signal="item_selected" from="CanvasLayer/HBoxContainer/MovementOption" to="." method="_on_movement_option_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/HBoxContainer/SteeringOption" to="." method="_on_steering_option_item_selected"]

@@ -109,4 +109,5 @@ func _on_start_timer_timeout() -> void:
 
 func _on_select_level_pressed() -> void:
 	
-	get_tree().change_scene_to_file("res://SelectLevel.tscn")
+	get_tree().change_scene_to_file("res://menus/SelectLevel.tscn")
+

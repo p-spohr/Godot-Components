@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkxllh8vbp4xv"]
 
-[ext_resource type="Script" path="res://select_level.gd" id="1_06gyj"]
-[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://space_theme.tres" id="1_6xfsj"]
+[ext_resource type="Script" path="res://menus/select_level.gd" id="1_05q3v"]
+[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://themes/space_theme.tres" id="2_4al34"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_06gyj")
+script = ExtResource("1_05q3v")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 texture_filter = 1
@@ -33,101 +33,101 @@ columns = 3
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
 [node name="AstroidPull" type="Button" parent="PanelContainer/GridContainer/MarginContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Astroid Pull"
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer2"]
+[node name="AstroidPush" type="Button" parent="PanelContainer/GridContainer/MarginContainer2"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Astroid Push"
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer3"]
+[node name="AstroidPushPull" type="Button" parent="PanelContainer/GridContainer/MarginContainer3"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Both"
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer4"]
+[node name="CollectStars" type="Button" parent="PanelContainer/GridContainer/MarginContainer4"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Collect Stars"
 
 [node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer5"]
+[node name="Race" type="Button" parent="PanelContainer/GridContainer/MarginContainer5"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Race"
 
 [node name="MarginContainer6" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer6"]
+[node name="CollectRace" type="Button" parent="PanelContainer/GridContainer/MarginContainer6"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Both"
 
 [node name="MarginContainer7" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer7"]
+[node name="ShootTarget" type="Button" parent="PanelContainer/GridContainer/MarginContainer7"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Shoot Target"
 
 [node name="MarginContainer8" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer8"]
+[node name="ShootTurret" type="Button" parent="PanelContainer/GridContainer/MarginContainer8"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Shoot Turret"
 
 [node name="MarginContainer9" type="MarginContainer" parent="PanelContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 theme_type_variation = &"SelectLevelMargin"
 
-[node name="Button" type="Button" parent="PanelContainer/GridContainer/MarginContainer9"]
+[node name="Fightboss" type="Button" parent="PanelContainer/GridContainer/MarginContainer9"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Fight Boss"
 
 [node name="QuitGame" type="Button" parent="."]
@@ -136,8 +136,10 @@ offset_left = 7.0
 offset_top = 9.0
 offset_right = 171.0
 offset_bottom = 44.0
-theme = ExtResource("1_6xfsj")
+theme = ExtResource("2_4al34")
 text = "Quit Game"
 
 [connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer/AstroidPull" to="." method="_on_astroid_pull_pressed"]
+[connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer2/AstroidPush" to="." method="_on_astroid_push_pressed"]
+[connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer3/AstroidPushPull" to="." method="_on_astroid_push_pull_pressed"]
 [connection signal="pressed" from="QuitGame" to="." method="_on_quit_game_pressed"]
