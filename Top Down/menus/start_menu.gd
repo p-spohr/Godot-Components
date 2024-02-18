@@ -21,6 +21,8 @@ var start_game : bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
+	print(get_tree().current_scene)
+	
 	# path to test arena
 	test_arena_path = "res://test_map.tscn"
 	
@@ -35,7 +37,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	# count down time after end timer starts
 	end_time_to_wait = end_timer.time_left
@@ -110,4 +112,5 @@ func _on_start_timer_timeout() -> void:
 func _on_select_level_pressed() -> void:
 	
 	get_tree().change_scene_to_file("res://menus/SelectLevel.tscn")
+
 

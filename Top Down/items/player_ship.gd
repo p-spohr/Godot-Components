@@ -11,13 +11,35 @@ var braked : bool = false
 var steering_type : String
 var movement_type : String
 
+var mouse_position_control : Control
+var current_mouse_position : Vector2
+var last_mouse_position : Vector2
+var click_timer : Timer
+var mouse_label : Label
+
+var level_scene : SceneTree
+var scene_theme : Theme = load("res://themes/space_theme.tres")
+
+var mouse_position_packed_array : PackedVector2Array
+
 func _ready() -> void:
 	
 	steering_type = 'wasd'
 	movement_type = 'velocity'
+	click_timer = get_node('ClickTimer')
 
+	level_scene = get_tree()
+	
+	# OOHHHH IT FINALLY WORKED!
+	# name = name of font in theme
+	# theme_type = name of base type (Label) or custom type
+	scene_theme.set_font_size('font_size', 'Label', 30)
+	scene_theme.set_color('font_color', 'Label', Color(1.0, 1.0, 0.0))
+	
+	mouse_position_control = level_scene.current_scene.get_node("MousePosition")
+	mouse_position_control.set_theme(scene_theme)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	
 	# already normalized
 	player_direction = Input.get_vector("left", "right", "up", "down")
@@ -33,6 +55,40 @@ func _process(delta: float) -> void:
 	
 	# angle the ship based on mouse position
 	# look_at(get_global_mouse_position())
+	
+	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and click_timer.is_stopped():
+		#
+		#mouse_label = Label.new()
+		#
+		#current_mouse_position = round(get_global_mouse_position())
+		#
+		## print(level_scene.current_scene.get_node("MousePosition"))
+		#
+		#mouse_position_control.add_child(mouse_label)
+		#
+		#mouse_label.text = str(current_mouse_position)
+		#mouse_label.position = current_mouse_position
+		#
+		#mouse_position_packed_array.append(current_mouse_position)
+		#
+		## queue_redraw()
+#
+		#click_timer.start()
+#
+	#if Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+	#
+		#for child in mouse_position_control.get_children():
+			#
+			#child.queue_free()
+			#
+		#get_tree().reload_current_scene()
+		#
+		
+#func _draw() -> void:
+	#
+	#if len(mouse_position_packed_array) > 2:
+		#
+		#draw_line_from_packed_array(mouse_position_packed_array)
 	
 func _physics_process(delta: float) -> void:
 	
@@ -136,3 +192,9 @@ func _on_movement_option_item_selected(index: int) -> void:
 		1:
 			movement_type = 'position'
 			print(movement_type)
+
+
+func draw_line_from_packed_array(packed_array : PackedVector2Array) -> void:
+	
+	draw_polyline(packed_array, Color(1, 0, 0))
+	

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dch1nahe8faqq"]
+[gd_scene load_steps=4 format=3 uid="uid://dch1nahe8faqq"]
 
 [ext_resource type="Script" path="res://menus/start_menu.gd" id="1_um36k"]
 [ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://themes/space_theme.tres" id="2_4o6py"]
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="3_ws5ci"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -56,6 +57,8 @@ one_shot = true
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="SpaceBackground" parent="." instance=ExtResource("3_ws5ci")]
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/SelectLevel" to="." method="_on_select_level_pressed"]

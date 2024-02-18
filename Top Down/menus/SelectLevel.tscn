@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkxllh8vbp4xv"]
+[gd_scene load_steps=4 format=3 uid="uid://bkxllh8vbp4xv"]
 
 [ext_resource type="Script" path="res://menus/select_level.gd" id="1_05q3v"]
 [ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://themes/space_theme.tres" id="2_4al34"]
+[ext_resource type="PackedScene" uid="uid://bxfevggvxo634" path="res://assets/background/space_background.tscn" id="3_02lxt"]
 
 [node name="SelectLevel" type="Control"]
 layout_mode = 3
@@ -138,6 +139,8 @@ offset_right = 171.0
 offset_bottom = 44.0
 theme = ExtResource("2_4al34")
 text = "Quit Game"
+
+[node name="SpaceBackground" parent="." instance=ExtResource("3_02lxt")]
 
 [connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer/AstroidPull" to="." method="_on_astroid_pull_pressed"]
 [connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer2/AstroidPush" to="." method="_on_astroid_push_pressed"]
