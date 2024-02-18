@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq06evnvscnt7"]
+
+[ext_resource type="Texture2D" uid="uid://fe76mpodn3f4" path="res://asset/astroid/meteorBrown_big1.png" id="1_s8uq8"]
+
+[node name="Astroid" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_s8uq8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-32, -42, 21, -42, 49, -2, 34, 34, 10, 31, -22, 42, -52, 10)

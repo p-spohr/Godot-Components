@@ -1,0 +1,148 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkxllh8vbp4xv"]
+
+[ext_resource type="Script" path="res://menu/select_level.gd" id="1_05q3v"]
+[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://theme/space_theme.tres" id="2_4al34"]
+[ext_resource type="PackedScene" uid="uid://ymkymg4qvhia" path="res://background/BackgroundStars.tscn" id="3_1wsl0"]
+
+[node name="SelectLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05q3v")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -353.0
+offset_top = -106.0
+offset_right = 335.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="AstroidPull" type="Button" parent="PanelContainer/GridContainer/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Astroid Pull"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="AstroidPush" type="Button" parent="PanelContainer/GridContainer/MarginContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Astroid Push"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="AstroidPushPull" type="Button" parent="PanelContainer/GridContainer/MarginContainer3"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Both"
+
+[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="CollectStars" type="Button" parent="PanelContainer/GridContainer/MarginContainer4"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Collect Stars"
+
+[node name="MarginContainer5" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="Race" type="Button" parent="PanelContainer/GridContainer/MarginContainer5"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Race"
+
+[node name="MarginContainer6" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="CollectRace" type="Button" parent="PanelContainer/GridContainer/MarginContainer6"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Both"
+
+[node name="MarginContainer7" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="ShootTarget" type="Button" parent="PanelContainer/GridContainer/MarginContainer7"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Shoot Target"
+
+[node name="MarginContainer8" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="ShootTurret" type="Button" parent="PanelContainer/GridContainer/MarginContainer8"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Shoot Turret"
+
+[node name="MarginContainer9" type="MarginContainer" parent="PanelContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("2_4al34")
+theme_type_variation = &"SelectLevelMargin"
+
+[node name="Fightboss" type="Button" parent="PanelContainer/GridContainer/MarginContainer9"]
+texture_filter = 1
+layout_mode = 2
+theme = ExtResource("2_4al34")
+text = "Fight Boss"
+
+[node name="QuitGame" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 9.0
+offset_right = 171.0
+offset_bottom = 44.0
+theme = ExtResource("2_4al34")
+text = "Quit Game"
+
+[node name="BackgroundStars" parent="." instance=ExtResource("3_1wsl0")]
+
+[connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer/AstroidPull" to="." method="_on_astroid_pull_pressed"]
+[connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer2/AstroidPush" to="." method="_on_astroid_push_pressed"]
+[connection signal="pressed" from="PanelContainer/GridContainer/MarginContainer3/AstroidPushPull" to="." method="_on_astroid_push_pull_pressed"]
+[connection signal="pressed" from="QuitGame" to="." method="_on_quit_game_pressed"]

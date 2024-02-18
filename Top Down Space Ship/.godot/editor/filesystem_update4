@@ -1,3 +1,10 @@
-res://menus/StartMenu.tscn
-res://themes/space_theme.tres
-res://menus/SelectLevel.tscn
+res://background/stars.gdshader
+res://background/star.tscn
+res://background/star.gdshader
+res://menu/StartMenu.tscn
+res://menu/SelectLevel.tscn
+res://background/BackgroundStars.tscn
+res://level/Level_AstroidPull.tscn
+res://item/PlayerShip.tscn
+res://background/background_stars.gd
+res://background/star.gd

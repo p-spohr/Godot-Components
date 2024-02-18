@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://bggqjglpo35yd"]
+
+[ext_resource type="Script" path="res://level/level_astroid_push_pull.gd" id="1_sba73"]
+[ext_resource type="PackedScene" uid="uid://dgh7w314elldg" path="res://item/PlayerShip.tscn" id="2_0jxo3"]
+[ext_resource type="PackedScene" uid="uid://dq06evnvscnt7" path="res://item/Astroid.tscn" id="3_06i0r"]
+[ext_resource type="PackedScene" uid="uid://ci2hneoqm0ub6" path="res://item/AstroidPush.tscn" id="5_6la8k"]
+
+[node name="TestMap" type="Node2D"]
+script = ExtResource("1_sba73")
+
+[node name="PlayerShip" parent="." instance=ExtResource("2_0jxo3")]
+position = Vector2(618, 314)
+
+[node name="Astroid" parent="." instance=ExtResource("3_06i0r")]
+position = Vector2(490, 505)
+
+[node name="Astroid2" parent="." instance=ExtResource("3_06i0r")]
+position = Vector2(595, 505)
+
+[node name="Astroid3" parent="." instance=ExtResource("3_06i0r")]
+position = Vector2(698, 505)
+
+[node name="Astroid4" parent="." instance=ExtResource("3_06i0r")]
+position = Vector2(807, 505)
+
+[node name="AstroidPush" parent="." instance=ExtResource("5_6la8k")]
+position = Vector2(-555, 1298)

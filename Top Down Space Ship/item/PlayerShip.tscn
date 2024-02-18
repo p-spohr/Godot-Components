@@ -1,0 +1,96 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgh7w314elldg"]
+
+[ext_resource type="Texture2D" uid="uid://dkdi32vlrlfla" path="res://asset/ships/playerShip1_blue.png" id="1_qpk2e"]
+[ext_resource type="Script" path="res://item/player_ship.gd" id="1_sdl1h"]
+[ext_resource type="Theme" uid="uid://b6dswvdhomf68" path="res://theme/space_theme.tres" id="2_47r5m"]
+[ext_resource type="PackedScene" uid="uid://ymkymg4qvhia" path="res://background/BackgroundStars.tscn" id="4_26yym"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rrd1u"]
+
+[node name="PlayerShip" type="CharacterBody2D" groups=["player", "ships"]]
+motion_mode = 1
+script = ExtResource("1_sdl1h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_qpk2e")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(38, 9, 38, -8, 13, -13, 0, -35, 6, -44, 7, -50, -25, -47, -28, -14, -38, -7, -38, 7, -28, 14, -25, 47, 5, 50, 7, 45, 1, 35, 13, 13)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+zoom = Vector2(0.5, 0.5)
+position_smoothing_speed = 200.0
+rotation_smoothing_speed = 100.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+modulate = Color(0.47451, 1, 0.760784, 1)
+texture_filter = 1
+material = SubResource("CanvasItemMaterial_rrd1u")
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 254.0
+offset_bottom = 104.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="QuitGame" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_47r5m")
+text = "Quit Game"
+
+[node name="ChangeLevel" type="Button" parent="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_47r5m")
+text = "Change Level"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -138.0
+offset_top = 9.0
+offset_right = -16.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="MovementOption" type="OptionButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Choose if the ship steering should be controled by the mouse or by WASD."
+item_count = 2
+selected = 0
+popup/item_0/text = "Velocity Movement"
+popup/item_0/id = 0
+popup/item_1/text = "Position Movement"
+popup/item_1/id = 1
+
+[node name="SteeringOption" type="OptionButton" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Choose if the ship steering should be controled by the mouse or by WASD."
+item_count = 2
+selected = 0
+popup/item_0/text = "WASD Steering"
+popup/item_0/id = 0
+popup/item_1/text = "Mouse Steering"
+popup/item_1/id = 1
+
+[node name="ClickTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="BackgroundStars" parent="." instance=ExtResource("4_26yym")]
+
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="CanvasLayer/PanelContainer/MarginContainer/VBoxContainer/ChangeLevel" to="." method="_on_change_level_pressed"]
+[connection signal="item_selected" from="CanvasLayer/HBoxContainer/MovementOption" to="." method="_on_movement_option_item_selected"]
+[connection signal="item_selected" from="CanvasLayer/HBoxContainer/SteeringOption" to="." method="_on_steering_option_item_selected"]

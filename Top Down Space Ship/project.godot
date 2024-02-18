@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Top Down Space Ship"
-run/main_scene="res://menus/StartMenu.tscn"
+run/main_scene="res://menu/StartMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [input]
