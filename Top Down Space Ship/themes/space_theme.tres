@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b6dswvdhomf68"]
+
+[ext_resource type="FontFile" uid="uid://dy0gtejxd4rvd" path="res://assets/font/Kenney Space.ttf" id="1_1omcj"]
+
+[resource]
+default_font = ExtResource("1_1omcj")
+SelectLevelMargin/base_type = &"MarginContainer"
+SelectLevelMargin/constants/margin_bottom = 20
+SelectLevelMargin/constants/margin_left = 20
+SelectLevelMargin/constants/margin_right = 20
+SelectLevelMargin/constants/margin_top = 10
+start_menu_buttons/base_type = &"Button"
+start_menu_buttons/font_sizes/font_size = 26

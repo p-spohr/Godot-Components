@@ -1,0 +1,17 @@
+res://items/PlayerShip.tscn
+res://themes/space_theme.tres
+res://assets/background/space_material.tres
+res://menus/SelectLevel.tscn
+res://levels/Level_AstroidPull.tscn
+res://items/AstroidPull.tscn
+res://items/AstroidPush.tscn
+res://assets/background/space_background.tscn
+res://assets/background/star_field.gdshader
+res://levels/Level_AstroidPullPush.tscn
+res://levels/level_astroid_push_pull.gd
+res://items/player_ship.gd
+res://assets/background/space_background.gd
+res://menus/StartMenu.tscn
+res://items/astroid_pull.gd
+res://menus/select_level.gd
+res://menus/start_menu.gd
