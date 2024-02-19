@@ -8,7 +8,7 @@
 shader = ExtResource("1_2fqgn")
 shader_parameter/clockwise = true
 shader_parameter/increase_size = Vector2(1, 1)
-shader_parameter/circle_size = Vector2(3, 3)
+shader_parameter/circle_size = Vector2(10, 10)
 shader_parameter/view_offset = Vector2(0, 0)
 shader_parameter/SEED = 1
 

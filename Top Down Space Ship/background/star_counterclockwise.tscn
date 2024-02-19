@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://lr0shi5arcjt"]
+
+[ext_resource type="Shader" path="res://background/star_ccw.gdshader" id="1_bam8a"]
+[ext_resource type="Texture2D" uid="uid://c0b0ef2ojp8ow" path="res://asset/star/star2.png" id="2_dqh20"]
+[ext_resource type="Script" path="res://background/star.gd" id="3_wkw70"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xfegy"]
+shader = ExtResource("1_bam8a")
+shader_parameter/clockwise = false
+shader_parameter/increase_size = Vector2(1, 1)
+shader_parameter/circle_size = Vector2(5, 5)
+shader_parameter/view_offset = Vector2(0, 0)
+shader_parameter/SEED = 1
+
+[node name="StarSpriteCCW" type="Sprite2D"]
+material = SubResource("ShaderMaterial_xfegy")
+texture = ExtResource("2_dqh20")
+script = ExtResource("3_wkw70")
