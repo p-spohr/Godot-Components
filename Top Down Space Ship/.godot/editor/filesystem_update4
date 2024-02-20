@@ -1,11 +1,12 @@
-res://background/BackgroundStars.tscn
+res://menu/StartMenu.tscn
 res://background/background_stars.gdshader
 res://background/star_cw.gdshader
 res://background/star_ccw.gdshader
 res://background/star.gdshader
 res://background/stars.gdshader
-res://menu/StartMenu.tscn
+res://background/star.gd
 res://menu/SelectLevel.tscn
+res://background/BackgroundStars.tscn
 res://level/Level_AstroidPull.tscn
 res://item/PlayerShip.tscn
 res://background/star.tscn

@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://ymkymg4qvhia"]
+[gd_scene load_steps=6 format=3 uid="uid://ymkymg4qvhia"]
 
 [ext_resource type="Shader" path="res://background/background_stars.gdshader" id="1_5xg1s"]
-[ext_resource type="PackedScene" uid="uid://ddnljpb7pv76l" path="res://background/star_clockwise.tscn" id="2_sdt41"]
-[ext_resource type="PackedScene" uid="uid://lr0shi5arcjt" path="res://background/star_counterclockwise.tscn" id="3_qd0ia"]
+[ext_resource type="PackedScene" uid="uid://yeyuqhwngeeo" path="res://background/star.tscn" id="2_qhtjo"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_3l1up"]
 
@@ -35,59 +34,53 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.388235, 0.411765, 0.615686, 1)
 
-[node name="StarSpriteCW" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(168, 165)
+[node name="StarSprite" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(35, 42)
 
-[node name="StarSpriteCW7" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(236, 585)
+[node name="StarSprite2" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(175, 42)
 
-[node name="StarSpriteCW8" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(1048, 583)
+[node name="StarSprite3" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(118, 299)
 
-[node name="StarSpriteCW9" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(883, 242)
+[node name="StarSprite4" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(429, 235)
 
-[node name="StarSpriteCW2" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(123, 312)
+[node name="StarSprite5" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(588, 108)
 
-[node name="StarSpriteCW3" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(945, 128)
+[node name="StarSprite6" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(790, 325)
 
-[node name="StarSpriteCW4" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(988, 432)
+[node name="StarSprite7" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(257, 413)
 
-[node name="StarSpriteCW5" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(478, 495)
+[node name="StarSprite8" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(529, 431)
 
-[node name="StarSpriteCW6" parent="ColorRect" instance=ExtResource("2_sdt41")]
-position = Vector2(69, 530)
+[node name="StarSprite9" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(862, 111)
 
-[node name="StarSpriteCCW" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(579, 238)
+[node name="StarSprite10" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(964, 473)
 
-[node name="StarSpriteCCW2" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(77, 73)
+[node name="StarSprite11" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(772, 498)
 
-[node name="StarSpriteCCW3" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(308, 429)
+[node name="StarSprite12" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(456, 545)
 
-[node name="StarSpriteCCW4" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(831, 92)
+[node name="StarSprite13" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(222, 574)
 
-[node name="StarSpriteCCW5" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(933, 518)
+[node name="StarSprite14" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(92, 477)
 
-[node name="StarSpriteCCW6" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(763, 497)
+[node name="StarSprite15" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(1080, 65)
 
-[node name="StarSpriteCCW7" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(730, 361)
+[node name="StarSprite16" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(852, 289)
 
-[node name="StarSpriteCCW8" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(367, 62)
-
-[node name="StarSpriteCCW9" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(1106, 42)
-
-[node name="StarSpriteCCW10" parent="ColorRect" instance=ExtResource("3_qd0ia")]
-position = Vector2(382, 201)
+[node name="StarSprite17" parent="ColorRect" instance=ExtResource("2_qhtjo")]
+position = Vector2(1064, 593)
