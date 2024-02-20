@@ -44,6 +44,15 @@ func _process(_delta: float) -> void:
 	# already normalized
 	player_direction = Input.get_vector("left", "right", "up", "down")
 	
+	# requires normalization
+	#player_direction.x = Input.get_axis("left", "right")
+	#player_direction.y = Input.get_axis("up", "down")
+	#
+	#if player_direction.length() > 1:
+		#player_direction = player_direction.normalized()
+	#
+	print(player_direction)
+	
 	# not normalized
 	#player_direction.x = Input.get_axis("left", "right")
 	#player_direction.y = Input.get_axis("up", "down")
