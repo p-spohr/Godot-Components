@@ -11,6 +11,7 @@ var braked : bool = false
 var steering_type : String
 var movement_type : String
 
+
 var mouse_position_control : Control
 var current_mouse_position : Vector2
 var last_mouse_position : Vector2
@@ -51,7 +52,7 @@ func _process(_delta: float) -> void:
 	#if player_direction.length() > 1:
 		#player_direction = player_direction.normalized()
 	#
-	print(player_direction)
+	# print(player_direction)
 	
 	# not normalized
 	#player_direction.x = Input.get_axis("left", "right")

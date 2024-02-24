@@ -1,0 +1,9 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1708792171
+circle.gdshader::Shader::-1::1708791708::0::1::::<><>::
+ColorChange.tscn::PackedScene::5122493911626780021::1708791708::0::1::::<><>::res://color_change.gdshader<>res://circle.gdshader<>res://normalized_uv.gdshader<>res://NormalizedUV.gd
+color_change.gdshader::Shader::-1::1708791708::0::1::::<><>::
+icon.svg::CompressedTexture2D::1782981079390083426::1708789702::1708789709::1::::<><>::
+line_linear.gdshader::Shader::-1::1708791845::0::1::::<><>::
+NormalizedUV.gd::GDScript::-1::1708791637::0::1::::<>ColorRect<>::
+normalized_uv.gdshader::Shader::-1::1708791708::0::1::::<><>::

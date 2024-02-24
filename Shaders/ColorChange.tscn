@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://ce8myxvh6dtll"]
+
+[ext_resource type="Shader" path="res://color_change.gdshader" id="1_vd3gh"]
+[ext_resource type="Shader" path="res://circle.gdshader" id="2_3ny76"]
+[ext_resource type="Shader" path="res://normalized_uv.gdshader" id="3_g07l7"]
+[ext_resource type="Script" path="res://NormalizedUV.gd" id="4_cfycy"]
+[ext_resource type="Shader" path="res://line_linear.gdshader" id="5_cr42f"]
+[ext_resource type="Shader" path="res://line_polynomial.gdshader" id="6_ordhk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kdjd6"]
+shader = ExtResource("1_vd3gh")
+shader_parameter/select_color = Color(0.8, 0.290196, 0.596078, 1)
+shader_parameter/mouse_position = null
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ia7y"]
+shader = ExtResource("2_3ny76")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r4o5h"]
+shader = ExtResource("3_g07l7")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ierax"]
+shader = ExtResource("5_cr42f")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ecd5f"]
+shader = ExtResource("6_ordhk")
+
+[node name="Background" type="ColorRect"]
+material = SubResource("ShaderMaterial_kdjd6")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="Circle" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_6ia7y")
+layout_mode = 0
+offset_left = 651.0
+offset_top = 53.0
+offset_right = 761.0
+offset_bottom = 154.0
+
+[node name="NormalizedUV" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_r4o5h")
+layout_mode = 0
+offset_left = 72.0
+offset_top = 78.0
+offset_right = 424.0
+offset_bottom = 381.0
+script = ExtResource("4_cfycy")
+
+[node name="LineLinear" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ierax")
+layout_mode = 0
+offset_left = 784.0
+offset_top = 44.0
+offset_right = 1094.0
+offset_bottom = 294.0
+
+[node name="LinePolynomial" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ecd5f")
+offset_left = 841.0
+offset_top = 338.0
+offset_right = 1111.0
+offset_bottom = 566.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 33.0
+offset_right = 79.0
+offset_bottom = 69.0
+theme_override_font_sizes/font_size = 26
+text = "(0,0)"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 428.0
+offset_top = 384.0
+offset_right = 481.0
+offset_bottom = 420.0
+theme_override_font_sizes/font_size = 26
+text = "(1,1)"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 432.0
+offset_top = 44.0
+offset_right = 485.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 26
+text = "(1,0)"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 9.0
+offset_top = 383.0
+offset_right = 62.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 26
+text = "(0,1)"
