@@ -2,6 +2,16 @@ res://ColorChange.tscn
 res://color_change.gdshader
 res://circle.gdshader
 res://normalized_uv.gdshader
-res://NormalizedUV.gd
 res://line_linear.gdshader
 res://line_polynomial.gdshader
+res://popup_menu.gd
+res://color_change.gd
+res://intro_shader.gd
+res://colors/color_change.gdshader
+res://colors/circle.gdshader
+res://colors/normalized_uv.gdshader
+res://colors/line_linear.gdshader
+res://colors/line_polynomial.gdshader
+res://shapes/design.gdshader
+res://ShaderIntro.tscn
+res://shapes/ShaderIntro.tscn

@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://ce8myxvh6dtll"]
+[gd_scene load_steps=14 format=3 uid="uid://ce8myxvh6dtll"]
 
-[ext_resource type="Shader" path="res://color_change.gdshader" id="1_vd3gh"]
-[ext_resource type="Shader" path="res://circle.gdshader" id="2_3ny76"]
-[ext_resource type="Shader" path="res://normalized_uv.gdshader" id="3_g07l7"]
-[ext_resource type="Script" path="res://NormalizedUV.gd" id="4_cfycy"]
-[ext_resource type="Shader" path="res://line_linear.gdshader" id="5_cr42f"]
-[ext_resource type="Shader" path="res://line_polynomial.gdshader" id="6_ordhk"]
+[ext_resource type="Shader" path="res://colors/color_change.gdshader" id="1_vd3gh"]
+[ext_resource type="Shader" path="res://colors/circle.gdshader" id="2_3ny76"]
+[ext_resource type="Script" path="res://colors/color_change.gd" id="2_747np"]
+[ext_resource type="Shader" path="res://colors/normalized_uv.gdshader" id="3_g07l7"]
+[ext_resource type="Script" path="res://colors/NormalizedUV.gd" id="4_cfycy"]
+[ext_resource type="Shader" path="res://colors/line_linear.gdshader" id="5_cr42f"]
+[ext_resource type="Shader" path="res://colors/line_polynomial.gdshader" id="6_ordhk"]
+[ext_resource type="Script" path="res://colors/popup_menu.gd" id="7_tibmu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kdjd6"]
 shader = ExtResource("1_vd3gh")
@@ -32,14 +34,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
+script = ExtResource("2_747np")
 
 [node name="Circle" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_6ia7y")
 layout_mode = 0
-offset_left = 651.0
-offset_top = 53.0
-offset_right = 761.0
-offset_bottom = 154.0
+offset_left = 519.0
+offset_top = 150.0
+offset_right = 629.0
+offset_bottom = 251.0
 
 [node name="NormalizedUV" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_r4o5h")
@@ -53,17 +56,18 @@ script = ExtResource("4_cfycy")
 [node name="LineLinear" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ierax")
 layout_mode = 0
-offset_left = 784.0
-offset_top = 44.0
-offset_right = 1094.0
-offset_bottom = 294.0
+offset_left = 127.0
+offset_top = 486.0
+offset_right = 281.0
+offset_bottom = 633.0
 
 [node name="LinePolynomial" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_ecd5f")
-offset_left = 841.0
-offset_top = 338.0
-offset_right = 1111.0
-offset_bottom = 566.0
+layout_mode = 0
+offset_left = 424.0
+offset_top = 503.0
+offset_right = 538.0
+offset_bottom = 623.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
@@ -75,6 +79,7 @@ theme_override_font_sizes/font_size = 26
 text = "(0,0)"
 
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 428.0
 offset_top = 384.0
 offset_right = 481.0
@@ -83,6 +88,7 @@ theme_override_font_sizes/font_size = 26
 text = "(1,1)"
 
 [node name="Label3" type="Label" parent="."]
+layout_mode = 0
 offset_left = 432.0
 offset_top = 44.0
 offset_right = 485.0
@@ -91,9 +97,31 @@ theme_override_font_sizes/font_size = 26
 text = "(1,0)"
 
 [node name="Label4" type="Label" parent="."]
+layout_mode = 0
 offset_left = 9.0
 offset_top = 383.0
 offset_right = 62.0
 offset_bottom = 419.0
 theme_override_font_sizes/font_size = 26
 text = "(0,1)"
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+title = "Popup"
+item_count = 3
+item_0/text = "First"
+item_0/checkable = 1
+item_0/id = 0
+item_1/text = "Second"
+item_1/checkable = 1
+item_1/id = 1
+item_2/text = "Third"
+item_2/checkable = 1
+item_2/id = 2
+script = ExtResource("7_tibmu")
+
+[node name="ColorPicker" type="ColorPicker" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 26.0
+offset_right = 1138.0
+offset_bottom = 602.0

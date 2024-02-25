@@ -1,2 +1,7 @@
 Label
+HBoxContainer
+VBoxContainer
+HSlider
 ColorRect
+ColorPicker
+PopupMenu
